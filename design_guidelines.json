@@ -1,0 +1,128 @@
+{
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "700"],
+      "usage": "All section headings (h1, h2, h3). Use italic variant for emphasis words.",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Paragraphs, navigation, buttons, labels.",
+      "letter_spacing": "tracking-normal"
+    }
+  },
+  "colors": {
+    "primary": {
+      "navy": "#1E3A5F",
+      "navy_dark": "#0F172A",
+      "navy_light": "#2C5282"
+    },
+    "accent": {
+      "gold": "#C9A227",
+      "gold_metallic": "#D4AF37",
+      "gold_light": "#F6E05E"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "off_white": "#F8F9FA",
+      "slate_100": "#F1F5F9",
+      "slate_900": "#0F172A"
+    },
+    "semantic": {
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "style": "Crystal Glass",
+      "classes": "bg-white/80 backdrop-blur-md border border-white/20 shadow-sm"
+    },
+    "borders": {
+      "gold_accent": "border-t-4 border-t-[#C9A227]",
+      "subtle": "border border-slate-200"
+    },
+    "shadows": {
+      "soft": "shadow-[0_4px_20px_rgba(0,0,0,0.05)]",
+      "hover": "shadow-[0_10px_40px_rgba(30,58,95,0.1)]"
+    }
+  },
+  "component_styles": {
+    "buttons": {
+      "primary": "bg-[#1E3A5F] text-white hover:bg-[#0F172A] rounded-full px-8 py-3 font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "bg-white text-[#1E3A5F] border border-[#1E3A5F] hover:bg-[#F8F9FA] rounded-full px-8 py-3 font-medium transition-all duration-300",
+      "accent": "bg-[#C9A227] text-white hover:bg-[#D4AF37] rounded-full px-8 py-3 font-medium transition-all duration-300 shadow-md"
+    },
+    "cards": {
+      "service": "bg-white p-8 rounded-xl border border-slate-100 shadow-soft hover:shadow-hover transition-all duration-300 group relative overflow-hidden",
+      "testimonial": "bg-[#F8F9FA] p-8 rounded-2xl border-l-4 border-[#C9A227]"
+    }
+  },
+  "layout_strategies": {
+    "hero": "Split screen: Left text (H1 + CTA), Right image (Professional Portrait). Use 'Playfair Display' for H1 with Gold accent words.",
+    "services": "Bento Grid: 3-column grid. Use icons for each service. Hover effect: Card lifts up, Gold border appears.",
+    "about": "Asymmetric layout. Text block overlaps image block. Use 'Gold Swirl' abstract as background texture.",
+    "international": "Map visualization or Skyline collage (London/NY) with overlay text."
+  },
+  "image_urls": {
+    "hero_founder": {
+      "url": "https://images.unsplash.com/photo-1653379672758-79f4160a5be5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBidXNpbmVzcyUyMHdvbWFuJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5OTY1ODA5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional woman, arms crossed, confident (Placeholder for Dipika)"
+    },
+    "office_bg": {
+      "url": "https://images.unsplash.com/photo-1666718621210-e662947b5dc3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBtaW5pbWFsJTIwd2hpdGUlMjBvZmZpY2UlMjBpbnRlcmlvciUyMGJyaWdodHxlbnwwfHx8fDE3Njk5NjU4MTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean white office interior, New Delhi context but modern"
+    },
+    "gold_accent": {
+      "url": "https://images.unsplash.com/photo-1565791380709-49e529c8b073?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwd2hpdGUlMjBvZmZpY2UlMjBpbnRlcmlvciUyMGJyaWdodHxlbnwwfHx8fDE3Njk5NjU4MTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Gold lamp on desk, premium detail"
+    },
+    "london_skyline": {
+      "url": "https://images.unsplash.com/photo-1650717721915-d2fab5448365?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxsb25kb24lMjBza3lsaW5lJTIwc3Vuc2V0fGVufDB8fHx8MTc2OTk2NTgzNXww&ixlib=rb-4.1.0&q=85",
+      "description": "London skyline for International Clients section"
+    },
+    "ny_skyline": {
+      "url": "https://images.unsplash.com/photo-1767558031499-26b38d8ea5f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxuZXclMjB5b3JrJTIwY2l0eSUyMHNreWxpbmUlMjBidXNpbmVzcyUyMGRpc3RyaWN0fGVufDB8fHx8MTc2OTk2NTgzOHww&ixlib=rb-4.1.0&q=85",
+      "description": "New York skyline for International Clients section"
+    },
+    "abstract_gold": {
+      "url": "https://images.unsplash.com/photo-1764437018245-2dbf4d199d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGdvbGQlMjBsaW5lcyUyMGZpbmFuY2lhbCUyMGdyb3d0aHxlbnwwfHx8fDE3Njk5NjU4NDF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract gold swirl for backgrounds/textures"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. THEME: Enforce Light Mode. Do not use dark mode by default. Background must be pure white (#FFFFFF) or very light gray (#F8F9FA).",
+    "2. FONTS: Import 'Playfair Display' and 'Manrope' from Google Fonts immediately.",
+    "3. HEADER: Sticky header with Glassmorphism. Logo on left (Text: 'Dipika Gujarati' in Playfair Display, Navy). Navigation centered. 'Book Free Call' button on right (Gold).",
+    "4. HERO SECTION: Use the 'hero_founder' image. Headline: 'Expert Accounting & CPA Coaching for Global Clients'. Subhead: 'Bridging the gap between Indian expertise and International standards (US/UK/Canada/Australia).'",
+    "5. SERVICES: Create a grid of cards. Each card must have an icon (use Lucide-React: Calculator, Globe, BookOpen, TrendingUp).",
+    "6. INTERNATIONAL: Use the London/NY skyline images as a parallax background strip with a dark Navy overlay (90% opacity) and white text on top.",
+    "7. CONTACT: Floating WhatsApp button (Green #25D366) bottom-right fixed. Contact form must be clean, single column.",
+    "8. FOOTER: Dark Navy background (#1E3A5F). Gold text for headers. White text for links.",
+    "9. ANIMATIONS: Use 'framer-motion'. Fade up elements on scroll. Stagger children in grids.",
+    "10. MOBILE: Ensure the 'Book Free Call' button is sticky at the bottom on mobile screens (z-50)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
