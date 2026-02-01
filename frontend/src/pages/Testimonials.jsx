@@ -1,73 +1,76 @@
 import { Link } from 'react-router-dom';
-import { 
-  Star, 
-  ArrowRight, 
-  Phone,
-  Quote
-} from 'lucide-react';
+import { Star, ArrowRight, Phone, Quote } from 'lucide-react';
+
+const testimonialsData = [
+  {
+    quote: "Extremely professional and detail-oriented. Monthly reporting improved immediately. Dipika's attention to detail is exceptional.",
+    author: "Sarah Mitchell",
+    role: "Small Business Owner",
+    location: "California, USA",
+    rating: 5
+  },
+  {
+    quote: "Clear communication and timely delivery. Highly recommended for any business looking for reliable accounting support.",
+    author: "James Thompson",
+    role: "E-commerce Business",
+    location: "London, UK",
+    rating: 5
+  },
+  {
+    quote: "Very structured and supportive approach. Helped me understand US GAAP clearly and apply it in my practice.",
+    author: "Priya Sharma",
+    role: "Chartered Accountant",
+    location: "India",
+    rating: 5
+  },
+  {
+    quote: "The coaching sessions completely changed how I approach international clients. I landed my first US client within a month!",
+    author: "Rahul Mehta",
+    role: "Finance Professional",
+    location: "India",
+    rating: 5
+  },
+  {
+    quote: "QuickBooks reconciliation used to take me hours. With Dipika's help, our month-end close is now seamless.",
+    author: "Michael Chen",
+    role: "Startup Founder",
+    location: "Toronto, Canada",
+    rating: 5
+  },
+  {
+    quote: "ASC 606 implementation was overwhelming until Dipika walked us through it step by step. Invaluable support.",
+    author: "Emma Williams",
+    role: "Finance Director",
+    location: "Sydney, Australia",
+    rating: 5
+  },
+];
+
+const caseStudyData = {
+  title: "From Struggle to Success: A Finance Professional's Journey",
+  before: [
+    "Sending 50+ cold emails per week with zero responses",
+    "LinkedIn profile looked generic and unprofessional",
+    "No clarity on pricing for international clients",
+    "Struggling to communicate value on calls"
+  ],
+  after: [
+    "Landed 3 international clients in 2 months",
+    "Optimized LinkedIn profile attracting inbound leads",
+    "Confident pricing strategy with clear packages",
+    "Smooth discovery calls that convert"
+  ]
+};
+
+function StarRating({ count }) {
+  const stars = [];
+  for (let i = 0; i < count; i++) {
+    stars.push(<Star key={i} size={18} className="text-[#C9A227] fill-[#C9A227]" />);
+  }
+  return <div className="flex gap-1 mb-4">{stars}</div>;
+}
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      quote: "Extremely professional and detail-oriented. Monthly reporting improved immediately. Dipika's attention to detail is exceptional.",
-      author: "Sarah Mitchell",
-      role: "Small Business Owner",
-      location: "California, USA",
-      rating: 5
-    },
-    {
-      quote: "Clear communication and timely delivery. Highly recommended for any business looking for reliable accounting support.",
-      author: "James Thompson",
-      role: "E-commerce Business",
-      location: "London, UK",
-      rating: 5
-    },
-    {
-      quote: "Very structured and supportive approach. Helped me understand US GAAP clearly and apply it in my practice.",
-      author: "Priya Sharma",
-      role: "Chartered Accountant",
-      location: "India",
-      rating: 5
-    },
-    {
-      quote: "The coaching sessions completely changed how I approach international clients. I landed my first US client within a month!",
-      author: "Rahul Mehta",
-      role: "Finance Professional",
-      location: "India",
-      rating: 5
-    },
-    {
-      quote: "QuickBooks reconciliation used to take me hours. With Dipika's help, our month-end close is now seamless.",
-      author: "Michael Chen",
-      role: "Startup Founder",
-      location: "Toronto, Canada",
-      rating: 5
-    },
-    {
-      quote: "ASC 606 implementation was overwhelming until Dipika walked us through it step by step. Invaluable support.",
-      author: "Emma Williams",
-      role: "Finance Director",
-      location: "Sydney, Australia",
-      rating: 5
-    },
-  ];
-
-  const caseStudy = {
-    title: "From Struggle to Success: A Finance Professional's Journey",
-    before: [
-      "Sending 50+ cold emails per week with zero responses",
-      "LinkedIn profile looked generic and unprofessional",
-      "No clarity on pricing for international clients",
-      "Struggling to communicate value on calls"
-    ],
-    after: [
-      "Landed 3 international clients in 2 months",
-      "Optimized LinkedIn profile attracting inbound leads",
-      "Confident pricing strategy with clear packages",
-      "Smooth discovery calls that convert"
-    ]
-  };
-
   return (
     <div className="pt-24 pb-20 md:pb-0" data-testid="testimonials-page">
       {/* Hero Section */}
@@ -89,17 +92,13 @@ export default function Testimonials() {
       <section className="section-padding bg-white" data-testid="testimonials-grid">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonialsData.map((testimonial, index) => (
               <div
                 key={index}
                 className="bg-[#F8F9FA] p-8 rounded-2xl border-l-4 border-[#C9A227] hover:shadow-lg transition-shadow duration-300"
                 data-testid={`testimonial-card-${index}`}
               >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={18} className="text-[#C9A227] fill-[#C9A227]" />
-                  ))}
-                </div>
+                <StarRating count={testimonial.rating} />
                 <Quote size={32} className="text-[#C9A227]/30 mb-4" />
                 <p className="text-slate-700 mb-6 leading-relaxed">
                   {testimonial.quote}
@@ -126,7 +125,7 @@ export default function Testimonials() {
                 Case Study: <span className="gold-text">Before vs After</span>
               </h2>
               <p className="text-slate-600">
-                {caseStudy.title}
+                {caseStudyData.title}
               </p>
             </div>
 
@@ -139,7 +138,7 @@ export default function Testimonials() {
                   Before Working Together
                 </h3>
                 <ul className="space-y-4">
-                  {caseStudy.before.map((item, index) => (
+                  {caseStudyData.before.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-slate-600">
                       <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
                       {item}
@@ -156,7 +155,7 @@ export default function Testimonials() {
                   After Working Together
                 </h3>
                 <ul className="space-y-4">
-                  {caseStudy.after.map((item, index) => (
+                  {caseStudyData.after.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-white/90">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 flex-shrink-0"></span>
                       {item}
