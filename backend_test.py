@@ -127,7 +127,7 @@ class DipikaWebsiteAPITester:
             "slug": f"test-blog-post-{timestamp}",
             "excerpt": "This is a test blog post excerpt",
             "content": "This is the full content of the test blog post",
-            "category": "Accounting",
+            "category": "International Clients",
             "author": "Dipika Gujarati",
             "published": True
         }
