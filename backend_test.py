@@ -154,7 +154,51 @@ class DipikaWebsiteAPITester:
             "GET",
             "blog",
             200,
-            params={"category": "Accounting"}
+            params={"category": "International Clients"}
+        )
+
+    def test_update_blog_post(self, slug):
+        """Test updating a blog post"""
+        if not slug:
+            print("⚠️  Skipping blog post update test - no slug provided")
+            return False, {}
+        
+        update_data = {
+            "title": f"Updated Test Blog Post {datetime.now().strftime('%H%M%S')}",
+            "excerpt": "This is an updated test blog post excerpt",
+            "content": "This is the updated full content of the test blog post",
+            "published": False
+        }
+        return self.run_test(
+            f"Update Blog Post ({slug})",
+            "PUT",
+            f"blog/{slug}",
+            200,
+            data=update_data
+        )
+
+    def test_delete_blog_post(self, slug):
+        """Test deleting a blog post"""
+        if not slug:
+            print("⚠️  Skipping blog post delete test - no slug provided")
+            return False, {}
+        
+        success, response = self.run_test(
+            f"Delete Blog Post ({slug})",
+            "DELETE",
+            f"blog/{slug}",
+            200
+        )
+        return success
+
+    def test_get_blog_posts_admin(self):
+        """Test getting all blog posts including unpublished (for admin)"""
+        return self.run_test(
+            "Get All Blog Posts (Admin)",
+            "GET",
+            "blog",
+            200,
+            params={"published_only": "false"}
         )
 
     def test_invalid_endpoints(self):
