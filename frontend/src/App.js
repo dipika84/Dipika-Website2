@@ -17,6 +17,7 @@ import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
