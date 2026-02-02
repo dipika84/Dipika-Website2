@@ -238,6 +238,14 @@ def main():
     tester.test_get_blog_post_by_slug(blog_slug)
     tester.test_blog_posts_with_category_filter()
     
+    # Test admin blog functionality (CRUD operations)
+    print("\n🔧 Testing Admin Blog CRUD Operations...")
+    tester.test_get_blog_posts_admin()
+    if blog_slug:
+        tester.test_update_blog_post(blog_slug)
+        # Note: We'll delete the post at the end to clean up
+        # tester.test_delete_blog_post(blog_slug)
+    
     # Test error handling
     print("\n🚫 Testing Error Handling...")
     tester.test_invalid_endpoints()
