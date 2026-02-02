@@ -48,6 +48,7 @@ Premium business website for Dipika Gujarati, a Chartered Accountant from India 
 5. **Testimonials** - 6 testimonial cards, Before vs After case study, trust metrics
 6. **Blog** - Dynamic blog listing, category filtering, search, 10 sample posts
 7. **Contact** - Contact form (Name, Email, Country, Service, Message), WhatsApp/Call buttons, booking placeholder
+8. **Admin Dashboard** - Blog post management, contact submissions viewer, lead emails viewer
 
 ### Backend APIs
 - `POST /api/contact` - Contact form submissions
